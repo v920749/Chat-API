@@ -31,6 +31,7 @@ class WhatsMediaUploader
         $data .= fgets($sock, 8192);
         $data .= fgets($sock, 8192);
         $data .= fgets($sock, 8192);
+        $data .= fgets($sock, 8192);
         fclose($sock);
 
         list($header, $body) = preg_split("/\R\R/", $data, 2);
